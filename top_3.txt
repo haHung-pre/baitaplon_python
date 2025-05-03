@@ -1,0 +1,36 @@
+Top 3 highest for Gls:
+Mohamed Salah: 28
+Alexander Isak: 22
+Erling Haaland: 21
+Top 3 lowest for Gls:
+Ashley Young: 1
+Axel Disasi: 1
+Axel Disasi: 1
+
+Top 3 highest for Ast:
+Mohamed Salah: 18
+Jacob Murphy: 11
+Antonee Robinson: 10
+Top 3 lowest for Ast:
+Abdoulaye Doucouré: 1
+Alejandro Garnacho: 1
+Axel Tuanzebe: 1
+
+Top 3 highest for xG:
+Mohamed Salah: 23.9
+Erling Haaland: 20.8
+Alexander Isak: 19.0
+Top 3 lowest for xG:
+Aaron Cresswell: 0.1
+Albert Grønbaek: 0.1
+Andy Irving: 0.1
+
+Top 3 highest for xAG:
+Mohamed Salah: 12.8
+Cole Palmer: 9.3
+Son Heung-min: 8.2
+Top 3 lowest for xAG:
+Abdukodir Khusanov: 0.1
+Ali Al Hamadi: 0.1
+Antony: 0.1
+
