@@ -1,0 +1,43 @@
+Unique Squad values before filtering: ['West Ham' 'Southampton' 'Everton' 'Manchester City' 'Leicester City'
+ 'Crystal Palace' 'Bournemouth' 'Brighton' 'Fulham' 'Manchester Utd'
+ 'Ipswich Town' 'Newcastle Utd' 'Liverpool' 'Aston Villa' 'Wolves'
+ "Nott'ham Forest" 'Tottenham' 'Arsenal' 'Brentford' 'Chelsea']
+
+Number of players per team after filtering:
+Southampton: 29 players
+Aston Villa: 28 players
+Ipswich Town: 28 players
+Brighton: 28 players
+Tottenham: 27 players
+Manchester Utd: 26 players
+Manchester City: 25 players
+Chelsea: 25 players
+Leicester City: 25 players
+West Ham: 23 players
+Arsenal: 23 players
+Newcastle Utd: 23 players
+Bournemouth: 23 players
+Wolves: 23 players
+Everton: 22 players
+Crystal Palace: 22 players
+Nott'ham Forest: 22 players
+Liverpool: 21 players
+Brentford: 21 players
+Fulham: 20 players
+Unique Squad values after filtering: ['West Ham' 'Southampton' 'Everton' 'Manchester City' 'Leicester City'
+ 'Crystal Palace' 'Bournemouth' 'Brighton' 'Fulham' 'Manchester Utd'
+ 'Ipswich Town' 'Newcastle Utd' 'Liverpool' 'Aston Villa' 'Wolves'
+ "Nott'ham Forest" 'Tottenham' 'Arsenal' 'Brentford' 'Chelsea']
+
+Analysis of Best-Most-Performing Team:
+The team with the highest overall average across all statistics is Crystal Palace with an average score of 144.18.
+Reasoning:
+- Excels in offensive metrics: xG
+- Strong in defensive metrics: Tkl, Blocks, Int
+- Effective in possession metrics: Touches, Carries, PrgC_possession
+- In the 2024-2025 Premier League season, this balanced performance across attack, defense, and possession aligns with a top-performing team.
+
+All tasks completed:
+- Top 3 players and top teams saved to C:\Users\nguye\Downloads\top_3.txt
+- Statistics summary saved to C:\Users\nguye\Downloads\results2.csv
+- Histograms saved in C:\Users\nguye\Downloads\plots
