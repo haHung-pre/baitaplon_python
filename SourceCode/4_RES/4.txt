@@ -1,0 +1,122 @@
+Loading player data from results.csv...
+Found 310 players with more than 900 minutes.
+Using hard-coded market values for players...
+Loaded 50 entries from hard-coded transfer data.
+Matched 'Aaron Wan-Bissaka' to 'Aaron Wan-Bissaka' with value €20M (Score: 100)
+Matched 'Aaron Ramsdale' to 'Aaron Ramsdale' with value €15M (Score: 100)
+Matched 'Abdoulaye Doucouré' to 'Abdoulaye Doucouré' with value €10M (Score: 100)
+Matched 'Adam Armstrong' to 'Adam Armstrong' with value €8M (Score: 100)
+Matched 'Adam Smith' to 'Adam Smith' with value €5M (Score: 100)
+Matched 'Erling Haaland' to 'Erling Haaland' with value €150M (Score: 100)
+Matched 'Mohamed Salah' to 'Mohamed Salah' with value €55M (Score: 100)
+Matched 'Bukayo Saka' to 'Bukayo Saka' with value €120M (Score: 100)
+Matched 'Trent Alexander-Arnold' to 'Trent Alexander-Arnold' with value €70M (Score: 100)
+Matched 'Kevin De Bruyne' to 'Kevin De Bruyne' with value €50M (Score: 100)
+Matched 'Declan Rice' to 'Declan Rice' with value €100M (Score: 100)
+Matched 'Bruno Fernandes' to 'Bruno Fernandes' with value €60M (Score: 100)
+Matched 'Phil Foden' to 'Phil Foden' with value €110M (Score: 100)
+No match for 'Rodrigo Hernández'
+Top 3 closest matches for 'Rodrigo Hernández': [('Rodrigo Bentancur', 71), ('Rodrigo Muniz', 67), ('Enzo Fernández', 65)]
+No match for 'Jack Grealish'
+Top 3 closest matches for 'Jack Grealish': [('Jacob Greaves', 69), ('Jack Harrison', 62), ('Jack Clarke', 58)]
+Matched 'Virgil van Dijk' to 'Virgil van Dijk' with value €35M (Score: 100)
+Matched 'Alisson' to 'Alisson' with value €40M (Score: 100)
+Matched 'Cole Palmer' to 'Cole Palmer' with value €80M (Score: 100)
+Matched 'Ollie Watkins' to 'Ollie Watkins' with value €60M (Score: 100)
+Matched 'Son Heung-min' to 'Son Heung-min' with value €45M (Score: 100)
+Matched 'Kyle Walker' to 'Kyle Walker' with value €15M (Score: 100)
+No match for 'John Stones'
+Top 3 closest matches for 'John Stones': [('Ben Johnson', 64), ('Joelinton', 60), ('João Gomes', 57)]
+Matched 'Gabriel Magalhães' to 'Gabriel Magalhães' with value €70M (Score: 100)
+Matched 'William Saliba' to 'William Saliba' with value €80M (Score: 100)
+Matched 'Martin Ødegaard' to 'Martin Ødegaard' with value €90M (Score: 100)
+Matched 'Kai Havertz' to 'Kai Havertz' with value €70M (Score: 100)
+Matched 'Alexis Mac Allister' to 'Alexis Mac Allister' with value €65M (Score: 100)
+Matched 'Dominik Szoboszlai' to 'Dominik Szoboszlai' with value €60M (Score: 100)
+Matched 'Diogo Jota' to 'Diogo Jota' with value €50M (Score: 100)
+Matched 'Andrew Robertson' to 'Andrew Robertson' with value €30M (Score: 100)
+Matched 'Ederson' to 'Ederson' with value €40M (Score: 100)
+Matched 'Joško Gvardiol' to 'Joško Gvardiol' with value €75M (Score: 100)
+Matched 'Rúben Dias' to 'Rúben Dias' with value €80M (Score: 100)
+Matched 'Bernardo Silva' to 'Bernardo Silva' with value €60M (Score: 100)
+No match for 'Julian Alvarez'
+Top 3 closest matches for 'Julian Alvarez': [('Edson Álvarez', 67), ('Emiliano Martínez', 58), ('Lisandro Martínez', 58)]
+Matched 'Jarrod Bowen' to 'Jarrod Bowen' with value €50M (Score: 100)
+Matched 'James Maddison' to 'James Maddison' with value €60M (Score: 100)
+No match for 'Richarlison'
+Top 3 closest matches for 'Richarlison': [('Alisson', 67), ('Jack Harrison', 67), ('Harry Wilson', 61)]
+Matched 'Pedro Porro' to 'Pedro Porro' with value €60M (Score: 100)
+Matched 'Dejan Kulusevski' to 'Dejan Kulusevski' with value €55M (Score: 100)
+Matched 'Emiliano Martínez' to 'Emiliano Martínez' with value €30M (Score: 100)
+Matched 'Ezri Konsa' to 'Ezri Konsa' with value €40M (Score: 100)
+Matched 'Morgan Rogers' to 'Morgan Rogers' with value €25M (Score: 100)
+Matched 'Leon Bailey' to 'Leon Bailey' with value €50M (Score: 100)
+Matched 'Amadou Onana' to 'Amadou Onana' with value €50M (Score: 100)
+Matched 'Jacob Ramsey' to 'Jacob Ramsey' with value €30M (Score: 100)
+Matched 'Pau Torres' to 'Pau Torres' with value €40M (Score: 100)
+Matched 'Youri Tielemans' to 'Youri Tielemans' with value €25M (Score: 100)
+Matched 'Eberechi Eze' to 'Eberechi Eze' with value €55M (Score: 100)
+Matched 'Marc Guéhi' to 'Marc Guéhi' with value €60M (Score: 100)
+Unmatched players saved to C:\Users\nguye\Downloads\plots\unmatched_players.txt
+Content of unmatched_players.txt (5 entries):
+['Rodrigo Hernández', 'Jack Grealish', 'John Stones', 'Julian Alvarez', 'Richarlison']
+Debug: Raw unmatched players (5): ['Rodrigo Hernández', 'Jack Grealish', 'John Stones', 'Julian Alvarez', 'Richarlison']
+Debug: Normalized unmatched players: [('Rodrigo Hernández', 'rodrigo hernandez'), ('Jack Grealish', 'jack grealish'), ('John Stones', 'john stones'), ('Julian Alvarez', 'julian alvarez'), ('Richarlison', 'richarlison')]
+Debug: Unique unmatched players (5): ['jack grealish', 'john stones', 'julian alvarez', 'richarlison', 'rodrigo hernandez']
+Successfully matched market values for 45 players.
+Market values saved to C:\Users\nguye\Downloads\transfer_values.csv
+Sample of transfer_values.csv:
+               Player  Transfer_Value
+1      Aaron Ramsdale            15.0
+2   Aaron Wan-Bissaka            20.0
+3  Abdoulaye Doucouré            10.0
+7          Adam Smith             5.0
+9      Adam Armstrong             8.0
+Proceeding with 45 matched players (note: small dataset may affect model reliability).
+Available columns in results.csv: ['Player', 'Nation', 'Squad', 'Pos', 'Age', 'MP', 'Starts', 'Min', 'Gls', 'Ast', 'CrdY', 'CrdR', 'xG', 'npxG', 'xAG', 'PrgC_standard', 'PrgP_standard', 'PrgR_standard', 'Gls_per90', 'Ast_per90', 'xG_per90', 'xAG_per90', 'GA90', 'Save%', 'CS%', 'PK Save%', 'SoT%', 'SoT/90', 'G/Sh', 'Dist', 'Total Cmp', 'Total Cmp%', 'TotDist_passing', 'Short Cmp%', 'Medium Cmp%', 'Long Cmp%', 'KP', '1/3_passing', 'PPA', 'CrsPA', 'PrgP_passing', 'SCA', 'SCA90', 'GCA', 'GCA90', 'Tkl', 'TklW', 'Att_defense', 'Lost_defense', 'Blocks', 'Sh_defense', 'Pass_defense', 'Int', 'Touches', 'Def Pen', 'Def 3rd', 'Mid 3rd', 'Att 3rd', 'Att Pen', 'Att (Take-Ons)', 'Succ%', 'Tkld%', 'Carries', 'TotDist (Carries)', 'PrgDist (Carries)', 'PrgC_possession', '1/3 (Carries)', 'CPA', 'Mis', 'Dis', 'Rec', 'PrgR (Receiving)', 'Fls', 'Fld', 'Off', 'Crs', 'Recov', 'Won', 'Lost_misc', 'Won%', 'Transfer_Value', 'Gls_Ast']
+Training XGBoost model...
+Best parameters: {'learning_rate': 0.05, 'max_depth': 3, 'n_estimators': 100, 'subsample': 0.8}
+Training MAE: 16.85 million €
+Test MAE: 20.74 million €
+Test R²: -0.01
+Cross-Validation MAE: 22.78 ± 3.92 million €
+Saved plot to C:\Users\nguye\Downloads\plots\actual_vs_predicted.png
+
+Top 5 Features by Importance:
+Gls_Ast: 0.1532
+xG: 0.1076
+Touches: 0.0854
+Tkl: 0.0841
+PrgP_standard: 0.0791
+Saved plot to C:\Users\nguye\Downloads\plots\feature_importance.png
+Predictions saved to C:\Users\nguye\Downloads\player_value_predictions.csv
+Sample of player_value_predictions.csv:
+               Player  Transfer_Value  Predicted_Value
+1      Aaron Ramsdale            15.0        48.016289
+2   Aaron Wan-Bissaka            20.0        44.556953
+3  Abdoulaye Doucouré            10.0        45.797283
+7          Adam Smith             5.0        43.170498
+9      Adam Armstrong             8.0        47.667297
+Report summary saved to C:\Users\nguye\Downloads\plots\report_summary.md
+Content of report_summary.md:
+# Player Value Estimation Report
+## Data Collection
+- Used hard-coded transfer values for 50 players due to inability to access https://www.footballtransfers.com.
+- Matched 45 players using fuzzy matching (threshold=75–80).
+## Feature Selection
+- Numeric: Age, Min, Gls, Ast, xG, xAG, PrgC_standard, PrgP_standard, PrgR_standard, Tkl, Int, Blocks, Touches, Carries, Rec, Won\%, Save\%, CS\%, Gls_Ast.\n- Categorical: Pos, Squad (one-hot encoded).
+- Rationale: Features capture performance, expected contributions, progression, involvement, and defensive actions relevant to market value.
+- Missing features: None.
+## Model
+- XGBoost Regressor with parameters: {'learning_rate': 0.05, 'max_depth': 3, 'n_estimators': 100, 'subsample': 0.8}.
+- Training MAE: 16.85M €, Test MAE: 20.74M €, Test R²: -0.01.
+- Cross-Validation MAE: 22.78 ± 3.92M €.
+- Low R² (-0.01) and high MAE (20.74M €) indicate the model is unreliable, likely due to the small dataset (45/307).
+## Results
+- Actual vs Predicted: See `actual_vs_predicted.png`.
+- Feature Importance: See `feature_importance.png`.
+- Predictions: See C:\Users\nguye\Downloads\player_value_predictions.csv.
+## Limitations
+- Small dataset (45/307 players) due to limited hard-coded data.
+- Low R² (-0.01) and high MAE (20.74M €) indicate poor predictive power.
+- 5 unmatched players (Rodri, Jack Grealish, John Stones, Julian Alvarez, Richarlison) due to absence in results.csv (likely <900 minutes).
