@@ -4,6 +4,8 @@ from io import StringIO
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 from bs4 import BeautifulSoup
 import time
 import os
@@ -11,11 +13,11 @@ import os
 # Define headers for requests to mimic a browser
 headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
 
-# Define output directory (modify this to your desired path)
-output_dir = '.'  # Current directory; change to e.g., 'output', 'C:\\Users\\YourName\\Documents\\', or './data'
-csv_filename = 'results.csv'  # Required filename per assignment
+# Define output directory
+output_dir = '.'  # Current directory
+csv_filename = 'results.csv'
 
-# Define table configurations with URL types, columns to extract, and renaming rules
+# Define table configurations
 table_configs = {
     'standard': {
         'url_type': 'stats',
@@ -78,12 +80,6 @@ table_configs = {
 def scrape_table(config):
     """
     Scrapes a specified table from FBref.com using Selenium, extracting player IDs and required columns.
-    
-    Args:
-        config (dict): Configuration with URL type, columns, and renaming rules.
-    
-    Returns:
-        pd.DataFrame: Processed DataFrame with selected and renamed columns, or None if table not found.
     """
     url = f'https://fbref.com/en/comps/9/{config["url_type"]}/Premier-League-Stats'
     
@@ -91,11 +87,21 @@ def scrape_table(config):
     chrome_options = Options()
     chrome_options.add_argument('--headless')
     chrome_options.add_argument(f'user-agent={headers["User-Agent"]}')
+    chrome_options.add_argument('--no-sandbox')
+    chrome_options.add_argument('--disable-dev-shm-usage')
+    chrome_options.add_argument('--disable-notifications')
+    chrome_options.add_argument('--disable-gcm')
+    chrome_options.add_argument('--disable-sync')
+    chrome_options.add_argument('--disable-extensions')
+    chrome_options.add_argument('--disable-background-networking')
+    
     driver = webdriver.Chrome(options=chrome_options)
     
     try:
         driver.get(url)
-        time.sleep(3)
+        WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((By.CLASS_NAME, 'stats_table'))
+        )
         
         # Find the player stats table
         table = None
@@ -294,6 +300,9 @@ def scrape_table(config):
         
         return df
     
+    except Exception as e:
+        print(f"Error scraping {url}: {e}")
+        return None
     finally:
         driver.quit()
 
@@ -366,7 +375,7 @@ merged_df = merged_df.groupby('Player_ID').agg(agg_dict).reset_index(drop=True)
 merged_df = merged_df[merged_df['Min'] > 90]
 
 # Add First_Name for sorting
-merged_df['First_Name'] = merged_df['Player'].apply(lambda x: x.split()[0])
+merged_df['First_Name'] = merged_df['Player'].apply(lambda x: x.split()[0] if isinstance(x, str) and x.strip() else 'Unknown')
 merged_df = merged_df.sort_values(by='First_Name')
 merged_df = merged_df.drop(columns=['First_Name'])
 
@@ -391,6 +400,22 @@ for col in final_columns:
         merged_df[col] = "N/a"
 
 final_df = merged_df[final_columns]
+
+# Enhanced function to process Nation column
+def extract_uppercase(nation):
+    if pd.isna(nation) or not isinstance(nation, str) or nation.strip() == "":
+        return "N/a"
+    uppercase = ''.join(char for char in nation if char.isupper())
+    return uppercase if uppercase else "N/a"
+
+# Apply function to remove lowercase letters from Nation column
+final_df['Nation'] = final_df['Nation'].apply(extract_uppercase)
+
+# Validate data quality
+for col in final_columns:
+    na_count = final_df[col].eq("N/a").sum()
+    if na_count > len(final_df) * 0.5:  # Warn if more than 50% of a column is "N/a"
+        print(f"Warning: Column {col} has {na_count} 'N/a' values ({na_count/len(final_df)*100:.1f}% of rows)")
 
 # Create output directory if it doesn't exist
 os.makedirs(output_dir, exist_ok=True)
