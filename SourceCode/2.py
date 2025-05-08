@@ -112,29 +112,21 @@ for stat in stats:
 with open(top_3_path, 'w', encoding='utf-8') as f:
     f.writelines(top_3_content)
 
-# Task 2: Calculate median, mean, and standard deviation for each statistic
+# Task 2: Calculate median, mean, and standard deviation for each team
 stats_summary = []
-for stat in stats:
-    valid_data = df[stat].dropna()
-    median_val = valid_data.median() if len(valid_data) > 0 else 'N/a'
-    mean_val = valid_data.mean() if len(valid_data) > 0 else 'N/a'
-    std_val = valid_data.std() if len(valid_data) > 0 else 'N/a'
-    row = {'Team': 'all', f'Median of {stat}': median_val, f'Mean of {stat}': mean_val, f'Std of {stat}': std_val}
-    stats_summary.append(row)
-
 for team in valid_teams:
     team_df = df[df['Squad'] == team]
     row = {'Team': team}
     for stat in stats:
         valid_data = team_df[stat].dropna()
-        row[f'Median of {stat}'] = valid_data.median() if len(valid_data) > 0 else 'N/a'
-        row[f'Mean of {stat}'] = valid_data.mean() if len(valid_data) > 0 else 'N/a'
-        row[f'Std of {stat}'] = valid_data.std() if len(valid_data) > 0 else 'N/a'
+        row[f'Median of {stat}'] = valid_data.median() if len(valid_data) > 0 else np.nan
+        row[f'Mean of {stat}'] = valid_data.mean() if len(valid_data) > 0 else np.nan
+        row[f'Std of {stat}'] = valid_data.std() if len(valid_data) > 0 else np.nan
     stats_summary.append(row)
 
 # Create DataFrame and save to results2.csv
 stats_df = pd.DataFrame(stats_summary)
-stats_df = stats_df.fillna('N/a')
+# Do not fill NaN with 'N/a' to keep empty cells in CSV
 stats_df.to_csv(results2_csv_path, index=False, encoding='utf-8-sig')
 
 # Task 3: Plot histograms for each statistic
@@ -185,13 +177,13 @@ for stat in stats:
         top_score = valid_means.max()
         top_teams[stat] = (top_team, top_score)
     else:
-        top_teams[stat] = ('N/a', 'N/a')
+        top_teams[stat] = ('None', np.nan)
 
 # Save top teams to file
 with open(top_3_path, 'a', encoding='utf-8') as f:
     f.write("\nTeams with highest average scores for each statistic:\n")
     for stat, (team, score) in top_teams.items():
-        score_str = f"{score:.2f}" if isinstance(score, (int, float)) else score
+        score_str = f"{score:.2f}" if isinstance(score, (int, float)) and not np.isnan(score) else 'N/a'
         f.write(f"{stat}: {team} with average {score_str}\n")
 
 # Task 5: Analysis of best-performing team
@@ -201,10 +193,10 @@ if len(valid_scores) > 0:
     best_team = valid_scores.idxmax()
     best_team_score = valid_scores.max()
 else:
-    best_team = 'N/a'
-    best_team_score = 'N/a'
+    best_team = 'None'
+    best_team_score = np.nan
 
-score_str = f"{best_team_score:.2f}" if isinstance(best_team_score, (int, float)) else best_team_score
+score_str = f"{best_team_score:.2f}" if isinstance(best_team_score, (int, float)) and not np.isnan(best_team_score) else 'N/a'
 print(f"\nAnalysis of Best-Most-Performing Team:")
 print(f"The team with the highest overall average across all statistics is {best_team} with an average score of {score_str}.")
 print("Reasoning:")
